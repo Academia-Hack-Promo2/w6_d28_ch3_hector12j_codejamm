@@ -1,0 +1,2 @@
+class JonathanController < ApplicationController
+end
