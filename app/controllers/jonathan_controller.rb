@@ -7,27 +7,36 @@ class JonathanController < ApplicationController
   
   #Solicitar listado de fiestas
   def all
-    render :json  => mostrar()
+    render json: @fiestas
   end
   
   #Solicitar información de una fiesta en específico
   def show
-      render :json => mostrar[params[:id].to_i]
+      render :json => @fiestas[params[:id].to_i]
   end
 
   #Crear una solicitud de fiesta
   def new
-    mostrar.push()
+    render :json => @fiestas.push(params[:fiesta])
   end
 
   #Actualizar una fiesta
   def update
-   
+   render :json => @fiestas[params[:id].to_i] = check_permit
   end
 
   #Borrar una solicitud de fiesta
   def delete
-    mostrar.delete_at[params[:id].to_i]
+    render :json => @fiestas.delete_at[params[:id].to_i]
   end
+
+  private 
+
+    def check_permit
+      params[:fiesta].permit(:Nombre, :Lugar, :Fecha, :Reservacion )
+    end
+
+
+
 
 end

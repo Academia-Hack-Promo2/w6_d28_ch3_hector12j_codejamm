@@ -2,12 +2,12 @@ Rails.application.routes.draw do
 
   # root 'jonathan#party'
  
-  get 'jonathan', to: 'jonathan#party'
-  get 'jonathan/all', to: 'jonathan#all' 
-  get 'jonathan/show/:id', to: 'jonathan#show'
-  post 'jonathan/new/', to: 'jonathan#new'
-  put 'jonathan/update', to: 'jonathan#update'
-  delete 'jonathan/delete/:id', to: 'jonathan#delete' 
+  get 'api/j', to: 'jonathan#party'
+  get 'api/j/all', to: 'jonathan#all' 
+  get 'api/j/show/:id', to: 'jonathan#show'
+  post 'api/j/new/', to: 'jonathan#new'
+  put 'api/j/update/:id', to: 'jonathan#update'
+  delete 'api/j/delete/:id', to: 'jonathan#delete' 
 
 
   # The priority is based upon order of creation: first created -> highest priority.
