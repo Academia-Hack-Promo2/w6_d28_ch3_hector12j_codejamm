@@ -8,8 +8,13 @@ Rails.application.routes.draw do
   post 'jonathan/new/', to: 'jonathan#new'
   put 'jonathan/update', to: 'jonathan#update'
   delete 'jonathan/delete/:id', to: 'jonathan#delete' 
+  
+  # root 'hector#party'
 
-
+  get 'hector', to: 'hector#party'
+  get 'hector/all', to: 'hector#all'
+  get 'hector/find/:id', to: 'hector#find'
+  post 'hector/buy', to: 'hector#buy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
