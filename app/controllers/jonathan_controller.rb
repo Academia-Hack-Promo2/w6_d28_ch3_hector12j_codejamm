@@ -17,12 +17,12 @@ class JonathanController < ApplicationController
 
   #Crear una solicitud de fiesta
   def new
-    mostrae.push()
+    mostrar.push()
   end
 
   #Actualizar una fiesta
   def update
-
+   
   end
 
   #Borrar una solicitud de fiesta
