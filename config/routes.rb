@@ -2,14 +2,28 @@ Rails.application.routes.draw do
 
   # root 'jonathan#party'
  
+<<<<<<< HEAD
   get 'api/j', to: 'jonathan#party'
   get 'api/j/all', to: 'jonathan#all' 
   get 'api/j/show/:id', to: 'jonathan#show'
   post 'api/j/new/', to: 'jonathan#new'
   put 'api/j/update/:id', to: 'jonathan#update'
   delete 'api/j/delete/:id', to: 'jonathan#delete' 
+=======
+  get 'api/j', to: 'jonathan#party'
+  get 'api/j/all', to: 'jonathan#all' 
+  get 'api/j/show/:id', to: 'jonathan#show'
+  post 'api/j/new/', to: 'jonathan#new'
+  put 'api/j/update/:id', to: 'jonathan#update'
+  delete 'api/j/delete/:id', to: 'jonathan#delete'  
+  
+  # root 'hector#party'
+>>>>>>> 9f699954fa5cb45d9c517909490161256e901692
 
-
+  get 'hector', to: 'hector#party'
+  get 'hector/all', to: 'hector#all'
+  get 'hector/find/:id', to: 'hector#find'
+  post 'hector/buy', to: 'hector#buy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
