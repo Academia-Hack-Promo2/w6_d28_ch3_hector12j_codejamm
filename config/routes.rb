@@ -12,9 +12,11 @@ Rails.application.routes.draw do
   # root 'hector#party'
 
   get 'hector', to: 'hector#party'
-  get 'hector/all', to: 'hector#all'
+  get 'hector/all_partys', to: 'hector#all_partys'
   get 'hector/find/:id', to: 'hector#find'
   post 'hector/buy', to: 'hector#buy'
+  put 'hector/actualizar/:id', to: 'hector#actualizar'
+  delete 'hector/delete/:id', to: 'hector#delete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
