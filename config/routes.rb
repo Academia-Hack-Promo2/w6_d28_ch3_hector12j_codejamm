@@ -2,12 +2,12 @@ Rails.application.routes.draw do
 
   # root 'jonathan#party'
  
-  get 'api/j', to: 'jonathan#party'
-  get 'api/j/all', to: 'jonathan#all' 
+  get 'api/j/party', to: 'jonathan#party'
+  get 'api/j/', to: 'jonathan#index' 
   get 'api/j/show/:id', to: 'jonathan#show'
-  post 'api/j/new/', to: 'jonathan#new'
-  put 'api/j/update/:id', to: 'jonathan#update'
-  delete 'api/j/delete/:id', to: 'jonathan#delete'   
+  post 'api/j/', to: 'jonathan#new'
+  put 'api/j/:id', to: 'jonathan#update'
+  delete 'api/j/:id', to: 'jonathan#delete'   
   
   # root 'hector#party'
 

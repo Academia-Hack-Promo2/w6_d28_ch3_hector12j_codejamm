@@ -6,7 +6,7 @@ class JonathanController < ApplicationController
   end
   
   #Solicitar listado de fiestas
-  def all
+  def index
     render json: @fiestas
   end
   
@@ -27,7 +27,7 @@ class JonathanController < ApplicationController
 
   #Borrar una solicitud de fiesta
   def delete
-    render :json => @fiestas.delete_at[params[:id].to_i]
+    render :json => @fiestas.delete_at(params[:id].to_i)
   end
 
   private 
